@@ -1,0 +1,628 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "parking",
+    "collectionId": "51682bce-935c-467e-b3d3-59677a1a5605",
+    "dateExported": "2024-11-03T07:51:58.596Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "66e22b50-4a52-454c-bc32-15a50d9c36e1",
+            "name": "auth",
+            "containerId": "",
+            "created": "2024-11-02T00:03:30.696Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "114aff46-4d0d-4e39-ab43-c7404900795d",
+            "name": "logs",
+            "containerId": "",
+            "created": "2024-11-02T22:44:18.649Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "parking_space",
+            "containerId": "",
+            "created": "2024-11-02T00:03:55.641Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "reservations",
+            "containerId": "",
+            "created": "2024-11-03T02:47:40.756Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-11-02T23:33:57.976Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "vehicle",
+            "containerId": "",
+            "created": "2024-11-02T04:33:15.365Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ace14ab3-5e52-41be-aa1a-64f4d9ad5173",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "crear plazas en el parking",
+            "url": "http://localhost:3000/parking-space/10",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-01T23:42:26.176Z",
+            "modified": "2024-11-03T01:06:44.460Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "adec4197-3cd7-43d3-9e7d-46167395bba5",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "66e22b50-4a52-454c-bc32-15a50d9c36e1",
+            "name": "login",
+            "url": "http://localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-02T00:03:16.270Z",
+            "modified": "2024-11-03T07:16:35.307Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "// {\n//     \"email\": \"employee@gmail.com\",\n//     \"password\": \"password\"\n// }\n\n{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"password\"\n}\n\n// {\n//     \"email\": \"client3@gmail.com\",\n//     \"password\": \"password\"\n// }",
+                "form": []
+            }
+        },
+        {
+            "_id": "dfbd619e-1716-4197-a711-ab28d8e50045",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "66e22b50-4a52-454c-bc32-15a50d9c36e1",
+            "name": "register",
+            "url": "http://localhost:3000/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-11-02T00:03:23.921Z",
+            "modified": "2024-11-02T22:37:12.664Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"role\": \"CLIENT\",\n    \"email\": \"client2@gmail.com\",\n    \"name\": \"client2\",\n    \"phone\": \"55558383\",\n    \"password\": \"password\"\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "2acb8248-3555-4583-ae73-13dd3b17b12e",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "obtener todas las plazas del parking",
+            "url": "http://localhost:3000/parking-space",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-11-02T00:27:04.345Z",
+            "modified": "2024-11-03T01:31:42.826Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "5a1c7fdc-c63b-464b-bf63-005bae2ee9f9",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "obtener una plaza específica del parking",
+            "url": "http://localhost:3000/parking-space/2",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-11-02T02:29:50.900Z",
+            "modified": "2024-11-03T01:42:16.388Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "6f931cab-e9e9-4b16-b793-3ba1256b1af1",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "actualizar los datos de una plaza",
+            "url": "http://localhost:3000/parking-space/entry?id=7&is_entry=true",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-11-02T03:45:37.039Z",
+            "modified": "2024-11-03T02:02:03.940Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "7",
+                    "isPath": false
+                },
+                {
+                    "name": "is_entry",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"init_dateTime\":\"2024-11-01T10:30:00Z\",\n  \"end_dateTime\": \"2024-11-01T15:30:00Z\",\n  \"clientId\": 3,\n  \"vehicleId\": 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "e23b231d-e9a1-48aa-90da-2927d6d1e52b",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "crear un vehículo",
+            "url": "http://localhost:3000/vehicle",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-11-02T04:33:36.917Z",
+            "modified": "2024-11-03T06:31:39.916Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"clientId\": 20,\n    \"license_vehicle\" : \"J765\",\n    \"model_vehicle\" : \"bmw\",\n    \"color_vehicle\" : \"azul\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "19791b50-d4e4-4a16-837f-2cdb5238f6b1",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "vaciar una plaza",
+            "url": "http://localhost:3000/parking-space/exit?id=4&date_exit=2024-11-01T10:30:00Z",
+            "method": "PUT",
+            "sortNum": 110000,
+            "created": "2024-11-02T05:39:36.319Z",
+            "modified": "2024-11-03T02:27:56.127Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "4",
+                    "isPath": false
+                },
+                {
+                    "name": "date_exit",
+                    "value": "2024-11-01T10:30:00Z",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "d19e34bd-0a1d-4348-9f9e-5f6ea01b05e0",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "obtener todos los vehículos",
+            "url": "http://localhost:3000/vehicle",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-11-03T06:31:58.790Z",
+            "modified": "2024-11-03T06:33:17.111Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "79419ad5-0d0f-4f32-b21a-e5400ad32e49",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "9797fe13-2658-4ac3-8ba1-b1bf8d29fe5c",
+            "name": "eliminar una plaza del parking",
+            "url": "http://localhost:3000/parking-space/7",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2024-11-02T05:54:02.358Z",
+            "modified": "2024-11-03T02:32:19.201Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "2fa5dd4c-25aa-404a-8fc9-79a93a5d20c9",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "obtener todos los vehículos de un cliente específico",
+            "url": "http://localhost:3000/vehicle/client/1",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-11-03T06:33:27.875Z",
+            "modified": "2024-11-03T06:39:40.788Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "3710cbc1-8683-4654-9b95-7dc2f693c57b",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "114aff46-4d0d-4e39-ab43-c7404900795d",
+            "name": "obtener los logs",
+            "url": "http://localhost:3000/logs",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-11-02T22:44:44.546Z",
+            "modified": "2024-11-02T22:55:18.746Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "b0964b29-a0a5-41c2-ad21-f75f880d68a1",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "obtener un vehículo específico",
+            "url": "http://localhost:3000/vehicle/1",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-11-03T07:02:27.240Z",
+            "modified": "2024-11-03T07:02:56.057Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "b9594c73-f6c3-49c4-9fdf-5f1b5f322959",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "eliminar un usuario",
+            "url": "http://localhost:3000/user/15",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2024-11-02T23:34:08.060Z",
+            "modified": "2024-11-02T23:48:40.155Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "2d95284f-5193-4c7a-b886-e3d253f48a27",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "obtener un vehículo específico Copy",
+            "url": "http://localhost:3000/vehicle/3",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-11-03T07:03:10.366Z",
+            "modified": "2024-11-03T07:15:53.604Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"clientId\": 20,\n    \"license_vehicle\" : \"J765\",\n    \"model_vehicle\" : \"BMW\",\n    \"color_vehicle\" : \"azul\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsIm5hbWUiOiJjbGllbnQzIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczMDYxODEwMSwiZXhwIjoxNzMwNjkwMTAxfQ.iXxLTfBQOocEmgtidYBzR6bUPOYPm3g6Q-DXXSYtL3s"
+            }
+        },
+        {
+            "_id": "96a9dd65-5992-4bd7-9114-1bfc29836b3f",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "crear una reservación",
+            "url": "http://localhost:3000/reservations",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-11-03T02:55:59.618Z",
+            "modified": "2024-11-03T05:17:01.452Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"init_dateTime\":\"2024-11-01T09:30:00Z\",\n  \"end_dateTime\": \"2024-11-01T10:31:00Z\",\n  \"clientId\": 3,\n  \"vehicleId\": 1,\n  \"placeId\": 8\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "012355a0-c92a-48fb-8298-be4b9b61196d",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "40231ebc-c7be-40c1-9cd3-74563d3990be",
+            "name": "obtener un vehículo específico Copy Copy",
+            "url": "http://localhost:3000/vehicle/3",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-11-03T07:16:15.816Z",
+            "modified": "2024-11-03T07:17:03.843Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNjE4MTk1LCJleHAiOjE3MzA2OTAxOTV9.SD_DVC5FmsZiJGMqPJYWnX2UB7LCI9b75JWn_oURIDc"
+            }
+        },
+        {
+            "_id": "76dfe571-77d3-4169-89f8-4160250fc02a",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "obtener todas las reservaciones",
+            "url": "http://localhost:3000/reservations",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-11-03T03:51:57.867Z",
+            "modified": "2024-11-03T03:52:29.901Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "6d8d7ef7-c60e-4b2e-9238-a198ef836c09",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "obtener una reservación específica",
+            "url": "http://localhost:3000/reservations/1",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2024-11-03T03:56:20.739Z",
+            "modified": "2024-11-03T03:57:02.082Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "57326f02-f40e-49b9-9082-5617b240eeae",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "actualizar los datos de una reservación",
+            "url": "http://localhost:3000/reservations/1",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2024-11-03T04:02:49.705Z",
+            "modified": "2024-11-03T04:04:54.215Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"init_dateTime\":\"2024-11-01T09:30:00Z\",\n  \"end_dateTime\": \"2024-11-01T10:31:00Z\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "d23f7c92-0cca-4d38-a12a-269ec808d494",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "5907334e-3fdf-4c0d-9e3a-d26092095ecd",
+            "name": "eliminar una reservación específica",
+            "url": "http://localhost:3000/reservations?id=2&is_cancellation=true",
+            "method": "DELETE",
+            "sortNum": 190000,
+            "created": "2024-11-03T04:36:16.559Z",
+            "modified": "2024-11-03T04:51:26.512Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "is_cancellation",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "2170f1ce-b3a6-4cd6-afab-55a5a54423b6",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "crear un usuario",
+            "url": "http://localhost:3000/user",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2024-11-03T05:29:13.191Z",
+            "modified": "2024-11-03T05:38:35.989Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"role\": \"CLIENT\",\n    \"email\": \"client3@gmail.com\",\n    \"name\": \"client3\",\n    \"phone\": \"55558383\",\n    \"password\": \"password\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "b08b6bdd-ed97-4082-9386-6c630568e24c",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener todos los usuarios",
+            "url": "http://localhost:3000/user",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-11-03T05:43:24.042Z",
+            "modified": "2024-11-03T05:45:27.470Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "b71fb6c8-1ffa-43b8-bf21-9f01a19914ee",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener todos los clientes",
+            "url": "http://localhost:3000/user/client",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-11-03T05:44:04.321Z",
+            "modified": "2024-11-03T05:45:12.363Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "08b270f3-d10c-473b-b219-74c6712c6f74",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener todos los empleados",
+            "url": "http://localhost:3000/user/employee",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-11-03T05:44:27.235Z",
+            "modified": "2024-11-03T05:44:27.235Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "6d07fc32-94ae-46dc-9013-a82ce47c2f4d",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener todos los administradores",
+            "url": "http://localhost:3000/user/admin",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2024-11-03T05:45:41.898Z",
+            "modified": "2024-11-03T05:45:56.543Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "868a908c-9e23-46a4-ae15-fde30fb7b726",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener un usuario específico",
+            "url": "http://localhost:3000/user/3",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2024-11-03T05:46:12.216Z",
+            "modified": "2024-11-03T05:48:53.020Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "b33500f0-0adb-4345-bbb8-2fa3176008f6",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "obtener un cliente específico ",
+            "url": "http://localhost:3000/user/client/3",
+            "method": "GET",
+            "sortNum": 260000,
+            "created": "2024-11-03T05:49:00.069Z",
+            "modified": "2024-11-03T05:51:49.986Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImVtcGxveWVlIiwicm9sZSI6IkVNUExPWUVFIiwiaWF0IjoxNzMwNjEzMDk1LCJleHAiOjE3MzA2ODUwOTV9.lmY4gPJhB8NTvKZ8Sv_irmw4MhZ4rW_kG5SbV6GMrqM"
+            }
+        },
+        {
+            "_id": "89923c5e-ad7e-4665-ad16-2f14a3e0a107",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "actualizar un usuario específico",
+            "url": "http://localhost:3000/user/20",
+            "method": "PUT",
+            "sortNum": 270000,
+            "created": "2024-11-03T05:52:01.828Z",
+            "modified": "2024-11-03T06:05:01.964Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"role\": \"CLIENT\",\n    \"email\": \"client3@gmail.com\",\n    \"name\": \"client3\",\n    \"phone\": \"55558383\",\n    \"password\": \"password\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "9be767b3-ea6e-4111-b425-1572ccc271a7",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "cambiar el role del empleado a admin",
+            "url": "http://localhost:3000/user/promote/1",
+            "method": "PUT",
+            "sortNum": 280000,
+            "created": "2024-11-03T06:05:19.892Z",
+            "modified": "2024-11-03T06:09:04.909Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"role\": \"CLIENT\",\n    \"email\": \"client3@gmail.com\",\n    \"name\": \"client3\",\n    \"phone\": \"55558383\",\n    \"password\": \"password\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        },
+        {
+            "_id": "d22f2dad-98c2-44e9-a8c5-14c019a6d7a6",
+            "colId": "51682bce-935c-467e-b3d3-59677a1a5605",
+            "containerId": "23e5d5d8-c58b-469d-be23-b9199e25a976",
+            "name": "eliminar un usuario",
+            "url": "http://localhost:3000/user/16",
+            "method": "DELETE",
+            "sortNum": 290000,
+            "created": "2024-11-03T06:11:31.035Z",
+            "modified": "2024-11-03T06:12:15.711Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzMwNTg4MTA4LCJleHAiOjE3MzA2NjAxMDh9.MaMo56ZBVx-ApD9MkJNzpDQIGFclUQn9QQHr3wZZOC8"
+            }
+        }
+    ],
+    "ref": "Q1GVuJjvXr89S8r8LF6eWz0fZXFMzOmbhMmJeDOd3AneNwt-tg2icfuEQ2AIuvhoZjLN3zcrWGHnUYFdPuHLgw"
+}

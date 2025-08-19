@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int            @id @default(autoincrement())
+  name         String
+  email        String         @unique
+  password     String
+  phone        String
+  role         Role
+
+  reservations Reservations[] 
+  parking_spaces Parking_Space[]
+  vehicles Vehicle[] 
+}
+
+model Vehicle {
+  id              Int            @id @default(autoincrement())
+  license_vehicle String         
+  model_vehicle   String    
+  color_vehicle   String 
+  client          User           @relation(fields: [clientId], references: [id])
+  clientId        Int
+
+  parking_spaces Parking_Space[]
+  reservations Reservations[]
+
+  @@unique([license_vehicle, clientId])
+}
+
+model Parking_Space {
+  id            Int        @id @default(autoincrement())
+  init_dateTime DateTime?
+  end_dateTime  DateTime?
+
+  client        User?      @relation(fields: [clientId], references: [id])
+  clientId      Int?
+
+  vehicle       Vehicle?   @relation(fields: [vehicleId], references: [id])
+  vehicleId     Int?
+
+  reservations Reservations[]
+}
+
+model Reservations {
+  id            Int           @id @default(autoincrement())
+  init_dateTime DateTime
+  end_dateTime  DateTime
+
+  client        User          @relation(fields: [clientId], references: [id])
+  clientId      Int
+
+  vehicle       Vehicle       @relation(fields: [vehicleId], references: [id])
+  vehicleId     Int
+
+  place       Parking_Space   @relation(fields: [placeId], references: [id])
+  placeId     Int
+}
+
+enum Role {
+  CLIENT
+  EMPLOYEE
+  ADMIN
+}
